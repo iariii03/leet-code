@@ -19,7 +19,6 @@ public class ListNode {
         this.next = next;
     }
 
-
     public static ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
             return null;
@@ -46,4 +45,16 @@ public class ListNode {
         }
         return start.next;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+
+        s.append(this.val);
+        if (this.next != null)
+            s.append(" ").append(this.next);
+
+        return s.toString();
+    }
+
 }
